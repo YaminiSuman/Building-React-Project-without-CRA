@@ -1,10 +1,10 @@
 import React from "react";
-
+import TodoList from "./todos/TodoList";
 import "./App.css";
 
 const App = () => (
   <div className="App">
-    <h1>Hello Mars!</h1>
+    <TodoList />
   </div>
 );
 
