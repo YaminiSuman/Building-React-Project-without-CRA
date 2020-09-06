@@ -5,6 +5,7 @@ import {
   removeTodoRequest,
   markTodoCompleteRequest
 } from "./thunks";
+import { getTodos, getTodosLoading } from "./selectors";
 import TodoListItem from "./TodoListItem";
 import NewTodoForm from "./NewTodoForm";
 import "./TodoList.css";
@@ -36,8 +37,8 @@ const TodoList = ({
 };
 
 const mapStateToProps = state => ({
-  todos: state.todos,
-  isLoading: state.isLoading
+  todos: getTodos(state),
+  isLoading: getTodosLoading(state)
 });
 const mapDispatchToProps = dispatch => ({
   startLoadingTodos: () => dispatch(loadTodos()),
