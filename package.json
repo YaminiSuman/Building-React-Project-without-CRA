@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha \"src/**/*.test.js\" --require @babel/register --recursive"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +16,15 @@
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "@babel/register": "^7.11.5",
     "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
     "css-loader": "^4.2.2",
+    "fetch-mock": "^9.10.7",
+    "mocha": "^8.1.3",
+    "node-fetch": "^2.6.1",
     "react-hot-loader": "^4.12.21",
+    "sinon": "^9.0.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
